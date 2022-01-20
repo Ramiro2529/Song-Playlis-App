@@ -25,10 +25,10 @@ public class Album {
 
         if(findSong(title)==null){
             songs.add(new Song(title,duration));
-            System.out.println(title+ ", Succesfully added to the album");
+           // System.out.println(title+ ", Succesfully added to the album");
             return true;
         }else{
-            System.out.println("Song "+title+" already exist in the albums");
+            //System.out.println("Song "+title+" already exist in the albums");
             return false;
 
         }
@@ -49,7 +49,7 @@ public class Album {
             playList.add(this.songs.get(index));
             return true;
         }
-        System.out.println("This album doesnt have song with tracknumber "+trackNumber);
+       // System.out.println("This album doesnt have song with tracknumber "+trackNumber);
             return false;
     }
 
@@ -60,7 +60,7 @@ public class Album {
                 return true;
             }
         }
-        System.out.println("There is no such song in album");
+      //  System.out.println("There is no such song in album");
         return false;
     }
 

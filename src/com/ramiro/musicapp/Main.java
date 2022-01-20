@@ -27,7 +27,9 @@ public class Main {
         albums.add(album);
         albums.add(album2);
 
-        System.out.println(albums);
+
+
+       // System.out.println(albums);
 
         LinkedList<Song> playList1 = new LinkedList<>();
 
@@ -107,6 +109,30 @@ public class Main {
                         }
                     }
 
+                    break;
+                case 4:
+                        printList(playList);
+
+                    break;
+                case 5:
+
+                    printMenu();
+                    break;
+
+                case 6:
+
+                    if(playList.size()==0){
+                       listIterator.remove();
+                       if(listIterator.hasNext()){
+                           System.out.println("Now playing "+listIterator.next().toString());
+
+                       }else {
+                           if(listIterator.hasPrevious()){
+                               System.out.println("Now playing "+listIterator.previous().toString());
+                           }
+
+                       }
+                    }
                     break;
             }
         }
